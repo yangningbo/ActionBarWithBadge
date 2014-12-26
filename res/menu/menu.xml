@@ -1,0 +1,13 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="br.com.web.actionbarbadges.activity.MainActivity" >
+
+    <item
+        android:id="@+id/email_action_bar"
+        android:orderInCategory="100"
+        android:showAsAction="always"
+        android:actionLayout="@layout/action_bar_badge_menu_layout"
+        android:icon="@drawable/email"
+        android:title="@string/email_menu"/>
+
+</menu>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">ActionBarBadge</string>
+    <string name="incrementa_badge">Incrementa badge</string>
+    <string name="decrementa_badge">Decrementa badge</string>
+    <string name="email_menu">Emails</string>
+
+</resources>
