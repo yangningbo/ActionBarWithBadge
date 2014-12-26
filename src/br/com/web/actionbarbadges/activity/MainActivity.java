@@ -9,7 +9,9 @@ import android.widget.TextView;
 
 public class MainActivity extends Activity {
 
+    // TextView que contem os valores do badge
     private TextView badge;
+    // Primitivo que contem o contador do badge
     private int quantidadeMensagens;
 
     @Override
@@ -22,9 +24,9 @@ public class MainActivity extends Activity {
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu, menu);
+        // View que recupera uma instancia da view do item do action bar
         View menuItem = menu.findItem(R.id.email_action_bar).getActionView();
-        // RelativeLayout badgeLayout = (RelativeLayout)
-        // menuItem.f(R.id.relative_layout_action_bar_badge).getActionView();
+        // Instancia o text view do badge
         badge = (TextView) menuItem.findViewById(R.id.actionbar_notifcation_textview);
         return true;
     }
@@ -41,6 +43,11 @@ public class MainActivity extends Activity {
         return super.onOptionsItemSelected(item);
     }
 
+    /**
+     * Incrementa o badge em um a cada vez que o botao incrementa e clicado
+     * Se o contador estiver em mais de 99 um sinal de plus e adicionado ao badge
+     * @param v
+     */
     public void incrementa(View v) {
         if(quantidadeMensagens == 0) {
             badge.setVisibility(TextView.VISIBLE);
@@ -54,6 +61,10 @@ public class MainActivity extends Activity {
         }
     }
 
+    /**
+     * Decrementa o contador do badge a cada vez que o botao decrementada e clicado
+     * @param v
+     */
     public void decrementa(View v) {
         quantidadeMensagens--;
 
